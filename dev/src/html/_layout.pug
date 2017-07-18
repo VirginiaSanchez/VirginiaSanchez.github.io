@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="author", content="Diego Rodríguez Suárez-Bustillo (http://rodribus.com)")
+    meta(name="description", content="A general guide on the use of meta tags in html pages")
+    meta(name="viewport", content="user-scalable=0")
+    meta(name="theme-color", content="#4E3D66")
+
+    block head.title
+      - var title = ""
+    if title
+      title #{title} | Virginia Sánchez
+    else
+      title Virginia Sánchez
+
+    block scripts
+      link(rel="stylesheet" type="text/css" href="/css/all.css")
+
+  body
+
+    block header
+
+    block content
+
+    block footer
+
+    script(type="text/javascript" src='/js/all.js')
