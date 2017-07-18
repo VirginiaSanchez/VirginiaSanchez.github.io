@@ -10,7 +10,8 @@ config.srcPaths = {
   html: [`${srcBasePath}/**/[^_]*.pug`],
   htmlAll: [`${srcBasePath}/**/*.pug`],
   js: `${srcBasePath}/**/*.js`,
-  css: `${srcBasePath}/**/*.scss`,
+  css: `${srcBasePath}/**/[^_]*.scss`,
+  cssAll: `${srcBasePath}/**/*.scss`,
   img: [
     `${srcBasePath}/images/**/*.png`,
     `${srcBasePath}/images/**/*.jpg`,

@@ -55,11 +55,12 @@ gulp.task('html', function buildHTML() {
       pretty: true
     }))
     .pipe(rename(function (path) {
-      if (path.basename !== 'index') {
+      if (path.basename !== 'home') {
         path.dirname = path.basename;
         path.basename = 'index';
       } else {
         path.dirname = '';
+        path.basename = 'index';
       }
     }))
     .pipe(gulp.dest(config.buildPaths.html));
@@ -80,7 +81,7 @@ gulp.task('server', ['build'], function () {
   });
 
   gulp.watch(config.srcPaths.js, ['js']);
-  gulp.watch(config.srcPaths.css, ['css']);
+  gulp.watch(config.srcPaths.cssAll, ['css']);
   gulp.watch(config.srcPaths.img, ['img']);
   gulp.watch(config.srcPaths.htmlAll, ['html']);
   gulp.watch([config.buildPaths.html + '/**/*', config.buildPaths.js + '/**/*']).on('change', browserSync.reload);

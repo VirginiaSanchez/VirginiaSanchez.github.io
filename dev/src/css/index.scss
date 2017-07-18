@@ -1,3 +1,20 @@
-* {
-  background-color: blueviolet;
+@import '_colors';
+@import '_fonts';
+
+
+@import '_header';
+@import '_footer';
+
+
+
+
+body {
+  // height: 100%;
+  font-family: $opensans;
+  background-color: $gray;
+  color: $black;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  position: relative;
 }
