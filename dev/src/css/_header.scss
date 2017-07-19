@@ -1,6 +1,57 @@
-#header {
-  background-color: $black;
-  color: $gray;
-  width: 100vw;
-  min-height: 4rem;
+@media (max-width: 768px) {
+  #header {
+    background-color: $black;
+    color: $gray;
+    width: 100vw;
+    min-height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #ham {
+    width: 50px;
+    min-height: 4rem;
+    position: absolute;
+    right: 0;
+    transform: translate3d(50px, 0, 0);
+    transition: transform .5s;
+    background-color: $purple;
+  }
+  .menu-opened #ham {
+    transform: translate3d(0, 0, 0);
+  }
+  $menu-width: 40%;
+  #menu {
+    z-index: 2;
+    min-width: $menu-width;
+    background-color: $black;
+    color: $gray;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    transition: transform .5s;
+    transform: translate3d(-100%, 0, 0);
+    nav {
+      margin-top: 4rem;
+    }
+  }
+  .menu-opened #menu {
+    transform: translate3d(0, 0, 0);
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #menu-overlay {
+    z-index: 1;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: background-color .5s;
+  }
+  .menu-opened #menu-overlay {
+    background-color: transparentize($white, .5);
+  }
 }
